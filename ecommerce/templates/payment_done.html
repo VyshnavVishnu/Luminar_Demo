@@ -1,0 +1,17 @@
+{% extends '' %}
+{% load static %}
+{% if status == True %}
+  <link rel="stylesheet" href="{% static 'css/payment_done.css' %}">
+  <div class="c">
+    <div class="success">&#10004;</div>
+    <h1 class="title">Payment Successful</h1>
+    <a href="{% url 'shop:home' %}" class="button">Continue Shopping</a>
+  </div>
+{% else %}
+  <div class="c">
+    <div class="success">&#x2713;</div>
+    <h1 class="title">Payment Failed</h1>
+    <a href="{% url 'cart:cart_view' %}" class="button">Retry Shopping</a>
+  </div>
+{% endif %}
+5267 3181 8797 5449
